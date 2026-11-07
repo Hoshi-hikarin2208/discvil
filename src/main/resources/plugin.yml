@@ -1,0 +1,22 @@
+name: DiscForge
+version: '${project.version}'
+main: com.hoshihikarin.discforge.DiscForgePlugin
+api-version: '1.21'
+author: Renze Daneille P. Rivero
+description: Turn your own music files into custom music discs.
+website: https://github.com/Hoshi-hikarin2208/DiscForge
+
+commands:
+  discforge:
+    description: Manage DiscForge custom music discs.
+    usage: /<command> <give|list|reload|pack|info>
+    aliases: [dforge]
+    permission: discforge.admin
+
+permissions:
+  discforge.admin:
+    description: Use the /discforge command.
+    default: op
+  discforge.play:
+    description: Insert DiscForge discs into jukeboxes.
+    default: true
