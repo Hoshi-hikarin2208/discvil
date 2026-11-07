@@ -1,0 +1,41 @@
+# DiscForge configuration
+# Put your .ogg (Vorbis) files in plugins/DiscForge/music/ and run /discforge reload.
+# Per-disc names, authors and materials live in discs.yml (created automatically).
+
+# Item used for new discs. Any MUSIC_DISC_* material works. Can be overridden per disc in discs.yml.
+default-material: MUSIC_DISC_CAT
+
+# Loudness of the jukebox. Sound reaches roughly 16 blocks per 1.0 of volume (4.0 = 64 blocks).
+volume: 4.0
+
+# Used when the length of an .ogg file cannot be read automatically.
+fallback-duration-seconds: 240
+
+# Show "Now playing" above the hotbar for nearby players.
+show-now-playing: true
+
+# Spawn music note particles above a playing jukebox.
+particles: true
+
+resource-pack:
+  # Prompt players to download the generated resource pack when they join.
+  send-on-join: true
+
+  # Pack format number written to pack.mcmeta. Change it if the client reports an incompatible pack.
+  pack-format: 46
+
+  # Built-in web server that hosts the pack. Open the port in your firewall / host panel.
+  host:
+    enabled: true
+    port: 8123
+    # Your server's public IP address or domain name, for example 203.0.113.10 or play.example.com
+    public-address: ""
+
+  # Host the pack yourself instead. Upload plugins/DiscForge/resourcepack/DiscForge-pack.zip
+  # and put the direct download link here. Leave empty to use the built-in host.
+  external-url: ""
+
+messages:
+  prefix: "&8[&bDiscForge&8] &7"
+  now-playing: "&d♪ &fNow playing: &b%disc%"
+  no-permission: "&cYou do not have permission to play custom discs."
